@@ -17,6 +17,7 @@
 * `201` Created 保存成功
 * `203` Non-Authoritative Information 认证失败
 * `401` 请求处理失败
+* `403` Forbidden 没有权限
 
 If WorkXP is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later. 
 
@@ -24,6 +25,11 @@ If WorkXP is having trouble, you might see a 5xx error. 500 means that the app i
 We only support JSON for serialization of data. Our format is to have no root element and we use snake\_case to describe attribute keys. This means that you have to send `Content-Type: application/json; charset=utf-8` when you're POSTing or PUTing data into Basecamp. **All API URLs end in .json to indicate that they accept and return JSON.**
 
 You'll receive a `415 Unsupported Media Type` response code if you attempt to use a different URL suffix or leave out the `Content-Type` header.
+
+## 数据接口
+
+* [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
+* [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
 
 # Sign in
 `POST /users/sign_in`
