@@ -32,6 +32,9 @@ You'll receive a `415 Unsupported Media Type` response code if you attempt to us
 * [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
 * [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
 * [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)
+* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)
+* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/deletions.md)
+* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/feedback.md)
 
 # Sign in
 `POST /users/sign_in`

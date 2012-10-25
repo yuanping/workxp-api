@@ -17,17 +17,14 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/Task/Email/ChanceNote",
+			"type":"Note/Comment/DoneTask/Email/ChanceNote",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
 			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
 			"parent_id":"note_parent_id",
 			"external":false,
-			"completed_user_id":0,
-			"state":"done/pending",
-			"privacy": "privacy/public",
-			"category": {"id": 32, "name": "task category"},
+			"state":"done/pending/won/lost",
 			"attachments":[
 				{"name":"avatar.png", "url":"http://workxp.info/avatar.png"}
 			]
@@ -53,15 +50,14 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/Task/Email/ChanceNote",
+			"type":"Note/Comment/DoneTask/Email/ChanceNote",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
 			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
 			"parent_id":"note_parent_id",
 			"external":false,
-			"completed_user_id":0,
-			"state":"done/pending",
+			"state":"done/pending/won/lost",
 			"attachments":[
 				{"name":"avatar.png", "url":"http://workxp.info/avatar.png"}
 			]

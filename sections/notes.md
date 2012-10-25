@@ -1,13 +1,14 @@
 # Notes
-增加、修改事件
+增加、修改事件(Note)或评论(Comment)，一次只能增加一个事件。
 
 ## Post note
 `POST /notes.json`
 
+###Params
+
 ```json
 	{    
 		"cid":"client id",
-		"subject":"subject",
 		"author_id": 37,
 		"content":"Note content",
 		"type":"Note/Comment",
@@ -40,7 +41,7 @@
 
 
 ###Response
-如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`
+如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`。
 
 
 
