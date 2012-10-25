@@ -29,7 +29,9 @@ You'll receive a `415 Unsupported Media Type` response code if you attempt to us
 ## 数据接口
 
 * [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
-* [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
+* [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
+* [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
+* [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)
 
 # Sign in
 `POST /users/sign_in`

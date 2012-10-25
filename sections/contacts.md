@@ -1,6 +1,6 @@
 # Contacts
-如果使用此接口取联系人，请确保传`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`  
-`GET /contacts.json`  一页500条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推.
+如果使用此接口取联系人，请确保传`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
+`GET /contacts.json`  一页500条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
 
 ### Response
 
@@ -34,8 +34,8 @@
 ```
 
 ### 数据说明
-`contact_methods`的`type`取值`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress`  
-contact_methods中的`key`的取值：   
+`contact_methods`的`type`取值：`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress`  
+`contact_methods`的`key`取值：   
 电话：office/公司  work/工作 mobile/手机  fax/传真  home/住宅  other/其它  
 邮箱：work/工作  personal/个人  other/其它  
 IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它  
@@ -67,7 +67,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 ```
 
 ###Response
-创建成功返回`201 Created` 
+创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
 
 ```json
 	{"cid": "client id", "id": 83}

@@ -1,0 +1,70 @@
+# Activities
+`GET /activities.json` 一次取最多50条记录。如果取回来数据刚好是50条，客户端有责任检查是否有更多记录，`&page=2`取51-100条记录，`&page=3`以此类推。  
+传`end`参数，取这个时间之前的历史记录，`begin`取这个时间之后的记录。同时传两个参数，取这两个时间之间的记录。
+
+###Response
+
+```json
+	[
+		{    
+			"id":21,
+			"created_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"subject":"Contact name or Chance name or Task...",
+			"author":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
+			"content":"Note content",
+			"type":"Note/Comment/Task/Email/ChanceNote",
+			"contact":{"id":66, "name":"汪练"},
+			"deal":{"id":66, "name":"购买WorkXP基本版"},
+			"case":{"id":66, "name":"销售案例"},
+			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"parent_id":"note_parent_id",
+			"external":false,
+			"completed_user_id":0,
+			"state":"done/pending",
+			"privacy": "privacy/public",
+			"category": {"id": 32, "name": "task category"},
+			"attachments":[
+				{"name":"avatar.png", "url":"http://workxp.info/avatar.png"}
+			]
+		}
+	]
+```
+
+## Get contact feeds
+`GET /contacts/56/activities.json` 一次取最多50条记录。同取Feeds  
+
+###Response
+
+```json
+	[
+		{    
+			"id":21,
+			"created_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"subject":"Contact name or Chance name or Task...",
+			"author":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
+			"content":"Note content",
+			"type":"Note/Comment/Task/Email/ChanceNote",
+			"contact":{"id":66, "name":"汪练"},
+			"deal":{"id":66, "name":"购买WorkXP基本版"},
+			"case":{"id":66, "name":"销售案例"},
+			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"parent_id":"note_parent_id",
+			"external":false,
+			"completed_user_id":0,
+			"state":"done/pending",
+			"attachments":[
+				{"name":"avatar.png", "url":"http://workxp.info/avatar.png"}
+			]
+		}
+	]
+```
