@@ -8,27 +8,27 @@
 
 ```json
 	[
-    {
-      "id":22,
-      "content":"task content",
+		{
+			"id":22,
+			"content":"task content",
 			"target_id": 26,
 			"target_type": "Contact/Deal/Case/Note",
-      "target_name": "袁平",
-      "due_at":"yyyy-MM-dd HH:mm:ss +0800",
-      "category": {"id": 2, "name": "约见"},
-      "author":{
+			"target_name": "袁平",
+			"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"category": {"id": 2, "name": "约见"},
+			"author":{
 				"id": 37,
 				"name": "袁平",
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
-      "assigned_to":{
+			"assigned_to":{
 				"id": 21,
 				"name": "汪练",
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
-      "privacy":"public/private",
-      "state":"pending/done"
-    }
+			"privacy":"public/private",
+			"state":"pending/done"
+		}
 	]
 ```
 
@@ -41,15 +41,15 @@
 
 ```json
 	{
-    "content":"task content",
-    "target_id": 26,
+		"content":"task content",
+		"target_id": 26,
 		"target_type": "Contact/Deal/Case/Note",
-    "due_at":"yyyy-MM-dd HH:mm:ss +0800",
-    "category_id":2,
-    "owner_id":37,
-    "assigned_to_id":36,
-    "privacy":"public/private",
-    "state":"pending/done"
+		"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"category_id":2,
+		"owner_id":37,
+		"assigned_to_id":36,
+		"privacy":"public/private",
+		"state":"pending/done"
 	}
 ```
 
@@ -68,12 +68,12 @@
 
 ```json
 	{
-    "content":"task content",
-    "due_at":"yyyy-MM-dd HH:mm:ss +0800",
-    "category_id":2,
-    "assigned_to_id":36,
-    "privacy":"public/private",
-    "state":"pending/done"
+		"content":"task content",
+		"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"category_id":2,
+		"assigned_to_id":36,
+		"privacy":"public/private",
+		"state":"pending/done"
 	}
 ```
 
