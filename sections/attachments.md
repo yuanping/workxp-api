@@ -7,9 +7,9 @@
 
 ###Params
 
-`id`: `Note/Comment`的`ID`
-`type`: `Note/Comment`
-`file`: 要上传的文件
+* `id`: `Note/Comment`的`ID`  
+* `type`: `Note/Comment`  
+* `file`: 要上传的文件
 
 ###Response
 

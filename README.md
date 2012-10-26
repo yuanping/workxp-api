@@ -1,6 +1,6 @@
 # WorkXP移动终端接口文档
 
-# 通用参数说明
+## 通用参数说明
 所有请求协议都使用http，除sign\_in以外每个请求都要有二级域名和 auth\_token参数。
 接口URL:http://<:domain>.api3.workxp.info  
 所有时间格式都为`yyyy-MM-dd HH:mm:ss +0800`  
@@ -8,11 +8,13 @@
 所有的`POST`请求，`JSON`数据放到`data`参数里
 
 ## Request
+
 * `auth_token` 在认证成功后返回，客户端应保存此token，作为每次请求的参数
 * `domain` 二级域名
 * `page` 取更多数据，比如一页为50条记录，则`&page=2`取51-100条记录
 
 ## Response
+
 * `200` OK 修改成功
 * `201` Created 保存成功
 * `203` Non-Authoritative Information 认证失败
@@ -26,49 +28,34 @@ We only support JSON for serialization of data. Our format is to have no root el
 
 You'll receive a `415 Unsupported Media Type` response code if you attempt to use a different URL suffix or leave out the `Content-Type` header.
 
-## 数据接口
+# Authentication
 
-* [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
-* [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
-* [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
-* [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)
-* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)
-* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/deletions.md)
-* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/feedback.md)
-
-# Sign in
 `POST /users/sign_in`
+
 ###Params
+
 * `user[email]` 用户名
 * `user[password]` 密码
 * `from` mobile
 
 ###Response
 
+```json
 	{
 		"auth_token":"value",
 		"user_id":"current_user_id",
 		"products":[{"company":"Rongping","domain":"rongping"}]
 	}
+```
 
-# Account data
-`GET : /account.json` 账户信息和用户、分类数据。传`begin`参数，返回users/categories这个时间之后更新的数据。
+## 数据接口
 
-	[
-		"plan":"免费版",
-		"expired":true,
-		"free_storage":2000,
-		"users":[
-							{"id":user_id, "name":"user1", "avatar_url": "http://workxp.info/avatar.png"},
-							{"id":user_id, "name":"user2", "avatar_url": "http://workxp.info/avatar.png"}
-	   				],
-		"categories":[
-									{"id":category_id, "name":"email",  "color":"#46647C", "type":"TaskCategory/ChanceCategory"}
-								 ]
-	]
-
-### 数据说明
-`plan` 免费版、个人版、基础版、加强版、高级版、终极版、其它
-`free_storage` 剩余空间数量，单位字节。(1024 = 1K)
-`expired` 是否已过期
+* [Account](https://github.com/yuanping/workxp-api/blob/master/sections/account.md)
+* [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
+* [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
+* [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
+* [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)
+* [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)
+* [Deletions](https://github.com/yuanping/workxp-api/blob/master/sections/deletions.md)
+* [Feedback](https://github.com/yuanping/workxp-api/blob/master/sections/feedback.md)
 
