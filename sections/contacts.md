@@ -49,7 +49,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 ## Post contact
 `POST /contacts.json`
 
-###Params
+### Params
 `avatar`: 头像  
 `data`:
 
@@ -70,16 +70,16 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 	}
 ```
 
-###Response
+### Response
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
 
 ```json
-	{"cid": "client id", "id": 83}
+	{"id": 83}
 ```
 ## Modify contact
 `PUT /contacts/37.json`
 
-###Params
+### Params
 `avatar`: 头像  
 `data`:
 
@@ -100,5 +100,5 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 	}
 ```
 
-###Response
+### Response
 如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`
