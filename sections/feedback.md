@@ -1,13 +1,16 @@
 # Feedback
-
-用户可以通过此接口反馈问题和意见。
+用户可以通过此接口反馈问题,提建议和意见。
 
 ## Post note
 `POST /feedback.json`
 
-###Params
+### Params
 
-* `content`: 反馈内容
+```json
+	{
+		"content": "feedback content"
+	}
+```
 
-###Response
+### Response
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。

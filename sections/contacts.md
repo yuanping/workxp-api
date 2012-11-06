@@ -1,8 +1,8 @@
 # Contacts
+联系人包括公司与个人。一个联系人可以有多个联系方式(`contact_methods`)。
 
 ## Get contacts
-
-如果使用此接口取联系人，请确保传`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
+如果使用此接口取联系人，请确保通过`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
 `GET /contacts.json`  一页500条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
 
 ### Response
@@ -47,18 +47,21 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 地址: office/公司  home/住宅  other/其它  
 
 ## Post contact
-`POST /contacts.json`
+`POST /contacts.json` 上传或修改联系人头像需要头像文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
+也就是说你要先上传图片，再把它关联到联系人上。没有头像，`avatar`设置为`{}`。
 
 ### Params
-`avatar`: 头像  
-`data`:
 
 ```json
 	{
-		"name":"汪练",  
-		"title":"CEO",
-		"company":"WorkXP",
-		"other":"background info",
+		"name": "汪练",  
+		"title": "CEO",
+		"company": "WorkXP",
+		"other": "background info",
+		"avatar": {
+			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+	    "name": "final_mockup.png"
+		},
 		"contact_methods":[
 			{
 				"id":234,
@@ -80,8 +83,6 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 `PUT /contacts/37.json`
 
 ### Params
-`avatar`: 头像  
-`data`:
 
 ```json
 	{
@@ -89,6 +90,10 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 		"title":"CEO",
 		"company":"WorkXP",
 		"other":"background info",
+		"avatar": {
+			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+	    "name": "final_mockup.png"
+		},
 		"contact_methods":[ 
 			 {
 		 		"id":234,
