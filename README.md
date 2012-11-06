@@ -5,13 +5,13 @@
 
 所有的请求都以`https://<:domain>.workxp.info/api/v3/`开始。 **使用SSL**。请求的地址包括二级域名和版本号。
 
-要请求取你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://<:domain>.workxp.info/api/v3/contacts.json. 可以用curl来测试:
+通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://<:domain>.workxp.info/api/v3/contacts.json. 可以用curl来测试:
 
 ```shell
 curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' https://demo.workxp.info/api/v3/contacts.json
 ```
 
-要创建的话也是一样的，只不过请求的head必须加上`Content-Type: application/json`：
+要创建一个事件也是一样的，只不过请求的head必须加上`Content-Type: application/json`：
 
 ```shell
 curl -u username:password \
@@ -20,14 +20,6 @@ curl -u username:password \
   -d '{ "name": "My new note!" }' \
   https://demo.workxp.info/api/v3/notes.json
 ```
-
-
-## 通用参数说明
-
-* 所有时间格式都为`yyyy-MM-dd HH:mm:ss +0800`  
-* `begin` 取这个时间之后的记录，`end` 取这个时间之前的记录，同时传两个参数取这两个时间之间的记录。  
-* `page` 取更多数据，比如一页为50条记录，则`&page=2`取51-100条记录
-
 
 ## Response
 
@@ -38,6 +30,12 @@ curl -u username:password \
 * `403` Forbidden 没有权限
 
 If WorkXP is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later. 
+
+## 通用参数说明
+
+* 所有时间格式都为`yyyy-MM-dd HH:mm:ss +0800`  
+* `begin` 取这个时间之后的记录，`end` 取这个时间之前的记录，同时传两个参数取这两个时间之间的记录。  
+* `page` 取更多数据，比如一页为50条记录，则`&page=2`取51-100条记录
 
 ## Identify your app
 You must include a `User-Agent` header with the name of your application and a link to it or your email address so we can get in touch in case you're doing something wrong (so we may warn you before you're blacklisted) or something awesome (so we may congratulate you). Here's an example:
@@ -73,11 +71,13 @@ You'll receive a `415 Unsupported Media Type` response code if you attempt to us
 ## 数据接口
 
 * [Account](https://github.com/yuanping/workxp-api/blob/master/sections/account.md)
+* [Users](https://github.com/yuanping/workxp-api/blob/master/sections/users.md)
 * [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
 * [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
 * [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
 * [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)
 * [Attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)
+* [Categories](https://github.com/yuanping/workxp-api/blob/master/sections/categories.md)
 * [Deletions](https://github.com/yuanping/workxp-api/blob/master/sections/deletions.md)
 * [Feedback](https://github.com/yuanping/workxp-api/blob/master/sections/feedback.md)
 

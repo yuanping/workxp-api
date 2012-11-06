@@ -1,8 +1,8 @@
 # Attachments
 
-上传文件到WorkXP需要两个步骤：
-1. 上传文件，当上传成功后会收到一个验证码。
-2. 把这个文件与事件或评论关联，可以参考[添加事件](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
+上传文件到WorkXP需要两个步骤：  
+1.  上传文件，当上传成功后会收到一个验证码。  
+2.  把这个文件与事件或评论关联，可以参考[添加事件](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
 
 ## Create attachment
 
