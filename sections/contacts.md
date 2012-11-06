@@ -45,6 +45,7 @@
 IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它  
 网站: office/公司  personal/个人  other/其它 
 地址: office/公司  home/住宅  other/其它  
+`access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
 
 ## Post contact
 `POST /contacts.json` 上传或修改联系人头像需要头像文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
@@ -64,12 +65,11 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 		},
 		"contact_methods":[
 			{
-				"id":234,
-					"type":"ContactPhone",
-					"key":"office", 
-					"value":"123123123321" 
-				}
-			]
+				"type":"ContactPhone",
+				"key":"office", 
+				"value":"123123123321" 
+			}
+		]
 	}
 ```
 
@@ -77,8 +77,33 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
 
 ```json
-	{"id": 83}
+	{
+		"id":56,
+		"created_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"name":"汪练",  
+		"title":"CEO",
+		"type":"Company/Person",
+		"company":{"id": 34, "name": "WorkXP"},
+		"other":"background info",
+		"author":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"avatar":{"name":"avatar.png", "url":"http://workxp.info/avatar.png"},
+		"contact_methods":[
+			{
+				"id":234,
+				"type":"ContactPhone",
+				"key":"office", 
+				"value":"123123123321" 
+			}
+		],
+		"access_policy": "Everyone/user_ids"
+	}
 ```
+
 ## Modify contact
 `PUT /contacts/37.json`
 

@@ -9,6 +9,10 @@
 
 ```json
 	[
-		{"id":category_id, "name":"email",  "color":"#46647C", "type":"TaskCategory/ChanceCategory"}
+		{"id":5, "name":"email",  "color":"#46647C", "type":"TaskCategory"},
+		{"id":6, "name":"Call",  "color":"#4664CC", "type":"ChanceCategory"}
 	]
 ```
+
+### 数据说明
+`type`区分是任务分类还是机会分类 `TaskCategory/ChanceCategory`

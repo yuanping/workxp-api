@@ -8,6 +8,7 @@
 
 ```json
 	[
-		{"id":user_id, "name":"user1", "avatar_url": "http://workxp.info/avatar.png"}
+		{"id":3, "name":"user1", "avatar_url": "http://workxp.info/avatar.png"},
+		{"id":4, "name":"user2", "avatar_url": "http://workxp.info/avatar.png"}
 	]
 ```

@@ -35,7 +35,30 @@
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。
 
 ```json
-	{"id": 83}
+	{    
+		"id":21,
+		"created_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"subject":"Contact name or Chance name or Task...",
+		"author":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"content":"Note content",
+		"type":"Note/Comment",
+		"contact":{"id":66, "name":"汪练"},
+		"deal":{"id":66, "name":"购买WorkXP基本版"},
+		"case":{"id":66, "name":"销售案例"},
+		"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"parent_id":45,
+		"external":false,
+		"state":"done",
+		"attachments":[
+			{"name":"final_mockup.png", "url":"http://workxp.info/avatar.png"}
+		],
+		"access_policy": "Everyone/user_ids"
+	}
 ```
 
 ## Modify note
