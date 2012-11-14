@@ -37,7 +37,7 @@
 	]
 ```
 
-### 数据说明
+### Description
 `contact_methods`的`type`取值：`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress`  
 `contact_methods`的`key`取值：   
 电话：office/公司  work/工作 mobile/手机  fax/传真  home/住宅  other/其它  

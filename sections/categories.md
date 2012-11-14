@@ -14,5 +14,5 @@
 	]
 ```
 
-### 数据说明
+### Description
 `type`区分是任务分类还是机会分类 `TaskCategory/ChanceCategory`
