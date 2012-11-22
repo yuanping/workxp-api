@@ -3,7 +3,7 @@
 
 ## Request
 
-所有的请求都以`https://<:domain>.workxp.info/api/v3/`开始。 **使用SSL**。请求的地址包括二级域名和版本号。
+所有的请求都以`https://<:domain>.workxp.info/api/v3/`开始。 **使用SSL**。请求的地址包括二级域名。
 
 通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://<:domain>.workxp.info/api/v3/contacts.json. 可以用curl来测试:
 
@@ -37,39 +37,25 @@ If WorkXP is having trouble, you might see a 5xx error. 500 means that the app i
 * `begin` 取这个时间之后的记录，`end` 取这个时间之前的记录，同时传两个参数取这两个时间之间的记录。  
 * `page` 取更多数据，比如一页为50条记录，则`&page=2`取51-100条记录
 
-## Identify your app
-You must include a `User-Agent` header with the name of your application and a link to it or your email address so we can get in touch in case you're doing something wrong (so we may warn you before you're blacklisted) or something awesome (so we may congratulate you). Here's an example:
+## 标识你的应用
+你必须包含一个`User-Agent`的header来标识你的应用。`User-Agent`包括你应用的名称与Email，这样如果我们发现有错误或问题时，我们可以及时联系你。下面是一个例子：
 
     User-Agent: Freshbooks (http://freshbooks.com)
 
-If you don't supply this header, you will get a `400 Bad Request`.
+如果你不提供这个头信息，我们会返回 `400 Bad Request`。
 
 ## No XML, just JSON
 We only support JSON for serialization of data. Our format is to have no root element and we use snake\_case to describe attribute keys. This means that you have to send `Content-Type: application/json; charset=utf-8` when you're POSTing or PUTing data into Basecamp. **All API URLs end in .json to indicate that they accept and return JSON.**
 
 You'll receive a `415 Unsupported Media Type` response code if you attempt to use a different URL suffix or leave out the `Content-Type` header.
 
-# Authentication
-`POST /users/sign_in`
+# 认证
+WorkXP提供了两种认证方式，基于HTTP与OAuth2认证。  
+如果你需要一个自己企业使用的应用，用HTTP认证方式就可以了，但如果你要做一个公开的应用，让别人来使用，那就要用OAuth2认证方式。
 
-### Params
-
-* `user[email]` 用户名
-* `user[password]` 密码
-* `from` mobile
-
-### Response
-
-```json
-	{
-		"auth_token":"value",
-		"user_id":"current_user_id",
-		"products":[{"company":"Rongping","domain":"rongping"}]
-	}
-```
 
 ## 数据接口
-
+* [Authentication](https://github.com/yuanping/workxp-api/blob/master/sections/authentication.md)
 * [Account](https://github.com/yuanping/workxp-api/blob/master/sections/account.md)
 * [Users](https://github.com/yuanping/workxp-api/blob/master/sections/users.md)
 * [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
