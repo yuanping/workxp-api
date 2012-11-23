@@ -41,7 +41,7 @@ If WorkXP is having trouble, you might see a 5xx error. 500 means that the app i
 要使用指定版本的接口，需要在请求上Head上设置`Accept`的值为：`application/vnd.workxp.info; version=3`。  
 如果不指定`Accept`，则默认使用最新版本的API
 ```shell
-	curl -u user:pass -H 'Accept: application/vnd.workxp.info; version=3' https://demo.workxp.info/api/contacts.json
+curl -u user:pass -H 'Accept: application/vnd.workxp.info; version=3' https://demo.workxp.info/api/contacts.json
 ```
 
 ## 标识你的应用
@@ -61,9 +61,11 @@ If WorkXP is having trouble, you might see a 5xx error. 500 means that the app i
 WorkXP提供了两种认证方式，基于HTTP与OAuth2认证。  
 如果你需要一个自己企业使用的应用，用HTTP认证方式就可以了，但如果你要做一个公开的应用，让别人来使用，那就要用OAuth2认证方式。  
 Basic HTTP Authentication  
+
 	curl -u user:pass https://demo.workxp.info/api/users.json
 	
 OAuth2 token认证方式  
+
 	curl -H "Authorization: token OAUTH-TOKEN" https://demo.workxp.info/api/users.json
 
 ## 数据接口
