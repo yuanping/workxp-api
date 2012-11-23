@@ -11,6 +11,6 @@
 	{
 		"id":34,  
 		"type":"Note/Comment/User/Catetory/Contact",
-		"created_at":"yyyy-MM-dd HH:mm:ss +0800"
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ"
 	}
 ```

@@ -13,8 +13,8 @@
 	[
 		{    
 			"id":21,
-			"created_at":"yyyy-MM-dd HH:mm:ss +0800",
-			"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"subject":"Contact name or Chance name or Task...",
 			"author":{
 				"id": 37,
@@ -26,7 +26,7 @@
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
-			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"occurred_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"parent_id":45,
 			"external":false,
 			"state":"done/pending/won/lost",
@@ -52,8 +52,8 @@
 	[
 		{    
 			"id":21,
-			"created_at":"yyyy-MM-dd HH:mm:ss +0800",
-			"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"subject":"Contact name or Chance name or Task...",
 			"author":{
 				"id": 37,
@@ -65,7 +65,7 @@
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
-			"occurred_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"occurred_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"parent_id":45,
 			"external":false,
 			"state":"done/pending/won/lost",

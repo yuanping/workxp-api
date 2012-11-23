@@ -11,8 +11,8 @@
 	[
 		{
 			"id":56,
-			"created_at":"yyyy-MM-dd HH:mm:ss +0800",
-			"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"name":"汪练",  
 			"title":"CEO",
 			"type":"Company/Person",
@@ -79,8 +79,8 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 ```json
 	{
 		"id":56,
-		"created_at":"yyyy-MM-dd HH:mm:ss +0800",
-		"updated_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"name":"汪练",  
 		"title":"CEO",
 		"type":"Company/Person",

@@ -14,7 +14,7 @@
 			"target_id": 26,
 			"target_type": "Contact/Deal/Case/Note",
 			"target_name": "袁平",
-			"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"category": {"id": 2, "name": "约见"},
 			"author":{
 				"id": 37,
@@ -44,7 +44,7 @@
 		"content":"task content",
 		"target_id": 26,
 		"target_type": "Contact/Deal/Case/Note",
-		"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
 		"owner_id":37,
 		"assigned_to_id":36,
@@ -69,7 +69,7 @@
 ```json
 	{
 		"content":"task content",
-		"due_at":"yyyy-MM-dd HH:mm:ss +0800",
+		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
 		"assigned_to_id":36,
 		"privacy":"public/private",
