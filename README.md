@@ -3,7 +3,9 @@
 
 ## Request
 
-所有的请求都以`https://<:domain>.workxp.info/api/`开始。 **使用SSL**。请求的地址包括二级域名。
+所有的请求（除Accounts接口）都以`https://<:domain>.workxp.info/api/`开始。 **使用SSL**。请求的地址包括二级域名。
+二级域名可以通过[Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)接口得到。
+Accounts接口不需要二级域名，以`https://workxp.info/api/`开始。
 
 通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://<:domain>.workxp.info/api/contacts.json. 可以用curl来测试:
 
@@ -23,25 +25,25 @@ curl -u username:password \
 
 ## Response
 
-* `200` OK 修改成功
-* `201` Created 保存成功
-* `203` Non-Authoritative Information 认证失败
-* `401` 请求处理失败
-* `403` Forbidden 没有权限
+* `200 OK` 修改成功
+* `201 Created` 保存成功
+* `203 Non-Authoritative Information` 非认证的信息
+* `401 Unauthorized` 认证失败
+* `403 Forbidden` 没有权限
 
 If WorkXP is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later. 
 
 ## 通用参数说明
 
-* 所有时间格式都以ISO 8601标准 `YYYY-MM-DDTHH:MM:SSZ`  
+* 所有时间格式都以ISO 8601标准 `YYYY-MM-DDTHH:MM:SSZ` (eg. 2012-05-03T18:01:29+08:00)  
 * `begin` 取这个时间之后的记录，`end` 取这个时间之前的记录，同时传两个参数取这两个时间之间的记录。  
 * `page` 取更多数据，比如一页为50条记录，则`&page=2`取51-100条记录
 
 ## 版本
-要使用指定版本的接口，需要在请求上Head上设置`Accept`的值为：`application/vnd.workxp.info; version=3`。  
+要使用指定版本的接口，需要在请求上Head上设置`Accept`的值为：`application/vnd.workxp.v3`。  
 如果不指定`Accept`，则默认使用最新版本的API
 ```shell
-curl -u user:pass -H 'Accept: application/vnd.workxp.info; version=3' https://demo.workxp.info/api/contacts.json
+curl -u user:pass -H 'Accept: application/vnd.workxp.v3' https://demo.workxp.info/api/contacts.json
 ```
 
 ## 标识你的应用
@@ -69,6 +71,7 @@ OAuth2 token认证方式
 	curl -H "Authorization: token OAUTH-TOKEN" https://demo.workxp.info/api/users.json
 
 ## 数据接口
+目前只实现了下面的接口，如果你需要更多的接口，可以和我们联系:yuanping@workxp.info
 * [Authentication](https://github.com/yuanping/workxp-api/blob/master/sections/authentication.md)
 * [Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)
 * [Users](https://github.com/yuanping/workxp-api/blob/master/sections/users.md)
