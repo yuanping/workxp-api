@@ -68,7 +68,7 @@ Basic HTTP Authentication
 	
 OAuth2 token认证方式  
 
-	curl -H "Authorization: token OAUTH-TOKEN" https://demo.workxp.info/api/users.json
+	curl -H "Authorization: Bearer OAUTH-TOKEN" https://demo.workxp.info/api/users.json
 
 ## 数据接口
 目前只实现了下面的接口，如果你需要更多的接口，可以和我们联系:yuanping@workxp.info
