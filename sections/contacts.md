@@ -17,7 +17,7 @@
 			"title":"CEO",
 			"type":"Company/Person",
 			"company":{"id": 34, "name": "WorkXP"},
-			"other":"background info",
+			"others":"background info",
 			"author":{
 				"id": 37,
 				"name": "袁平",
@@ -40,11 +40,11 @@
 ### Description
 `contact_methods`的`type`取值：`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress`  
 `contact_methods`的`key`取值：   
-电话：office/公司  work/工作 mobile/手机  fax/传真  home/住宅  other/其它  
-邮箱：work/工作  personal/个人  other/其它  
-IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它  
-网站: office/公司  personal/个人  other/其它 
-地址: office/公司  home/住宅  other/其它  
+电话：office/公司  work/工作 mobile/手机  fax/传真  home/住宅  others/其它  
+邮箱：work/工作  personal/个人  others/其它  
+IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它  
+网站: office/公司  personal/个人  others/其它 
+地址: office/公司  home/住宅  others/其它  
 `access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
 
 ## Post contact
@@ -58,10 +58,11 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 		"name": "汪练",  
 		"title": "CEO",
 		"company": "WorkXP",
-		"other": "background info",
+		"others": "background info",
+		"type":"Company/Person",
 		"avatar": {
 			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
-	    "name": "final_mockup.png"
+	    	"name": "final_mockup.png"
 		},
 		"contact_methods":[
 			{
@@ -85,7 +86,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 		"title":"CEO",
 		"type":"Company/Person",
 		"company":{"id": 34, "name": "WorkXP"},
-		"other":"background info",
+		"others":"background info",
 		"author":{
 			"id": 37,
 			"name": "袁平",
@@ -114,14 +115,13 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  other/其它
 		"name":"汪练",  
 		"title":"CEO",
 		"company":"WorkXP",
-		"other":"background info",
+		"others":"background info",
 		"avatar": {
 			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
-	    "name": "final_mockup.png"
+	    	"name": "final_mockup.png"
 		},
 		"contact_methods":[ 
 			 {
-		 		"id":234,
 		 		"type":"ContactPhone",
 		 		"key":"office", 
 		 		"value":"123123123321" 

@@ -3,7 +3,7 @@
 
 ## Get global activities
 `GET /activities.json` 一次取最多50条记录。如果取回来数据刚好是50条，客户端有责任检查是否有更多记录，`&page=2`取51-100条记录，`&page=3`以此类推。  
-传`end`参数，取这个时间之前的历史记录，`begin`取这个时间之后的记录。同时传两个参数，取这两个时间之间的记录。
+传`end`参数，取这个时间之前的历史记录，`begin`取这个时间之后的记录。
 一条动态可以同时关联到某个联系人和机会，即`contact`与`deal`都有值，也可以不关联到任何对象（联系人、机会、项目），即`contact`,`deal`,`case`都为`{}`。  
 如果`author`的`id`为`0`，说明这条动态不是由WorkXP的用户产生的，是外部的一个联系人添加的，这时`author`的`name`为联系人姓名，`avatar_url`为联系人的头像。
 
@@ -22,7 +22,7 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/DoneTask/Email/ChanceNote",
+			"type":"Note/Comment/Task/Email/ChanceNote",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
@@ -61,7 +61,7 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/DoneTask/Email/ChanceNote",
+			"type":"Note/Comment/Task/Email/ChanceNote",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},

@@ -6,7 +6,7 @@
 ## HTTP认证
 快速的使用起WorkXP API 可以通过基本的HTTP认证方式。
 ```shell
-curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' https://demo.workxp.info/api/users.json
+curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' https://workxp.info/api/users.json
 ```
 
 要创建一个事件也是一样的，只不过请求的head必须加上`Content-Type: application/json`：  
@@ -16,7 +16,7 @@ curl -u username:password \
   -H 'Content-Type: application/json' \
   -H 'User-Agent: MyApp (yourname@example.com)' \
   -d '{ "name": "My new note!" }' \
-  https://demo.workxp.info/api/notes.json
+  https://workxp.info/api/notes.json
 ```
 
 ## OAuth2认证

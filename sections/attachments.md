@@ -16,7 +16,7 @@ curl --data-binary @logo.png \
        -u user:pass \
        -H 'Content-Type: image/png' \
        -H 'User-Agent: Demo (yuanping@workxp.info)' \
-       https://demo.workxp.info/api/attachments.json
+       https://workxp.info/api/attachments.json
 ```
 
 ### Response

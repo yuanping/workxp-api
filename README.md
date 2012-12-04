@@ -3,14 +3,14 @@
 
 ## Request
 
-所有的请求（除Accounts接口）都以`https://<:domain>.workxp.info/api/`开始。 **使用SSL**。请求的地址包括二级域名。
-二级域名可以通过[Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)接口得到。
-Accounts接口不需要二级域名，以`https://workxp.info/api/`开始。
+所有的请求都以`https://workxp.info/api/`开始。 **使用SSL**。除Accounts接口以外，其它请求的head要有二级域名('Sub-Domain: rongping')。
+二级域名可以通过[Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)接口得到。  
+Accounts接口不需要二级域名。
 
-通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://<:domain>.workxp.info/api/contacts.json. 可以用curl来测试:
+通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://workxp.info/api/contacts.json. 可以用curl来测试:
 
 ```shell
-curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' https://demo.workxp.info/api/contacts.json
+curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' -H 'Sub-Domain: rongping' https://workxp.info/api/contacts.json
 ```
 
 要创建一个事件也是一样的，只不过请求的head必须加上`Content-Type: application/json`：
@@ -18,9 +18,10 @@ curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' https://demo.wor
 ```shell
 curl -u username:password \
   -H 'Content-Type: application/json' \
+  -H 'Sub-Domain: rongping'\
   -H 'User-Agent: MyApp (yourname@example.com)' \
   -d '{ "name": "My new note!" }' \
-  https://demo.workxp.info/api/notes.json
+  https://workxp.info/api/notes.json
 ```
 
 ## Response
@@ -43,7 +44,7 @@ If WorkXP is having trouble, you might see a 5xx error. 500 means that the app i
 要使用指定版本的接口，需要在请求上Head上设置`Accept`的值为：`application/vnd.workxp.v3`。  
 如果不指定`Accept`，则默认使用最新版本的API
 ```shell
-curl -u user:pass -H 'Accept: application/vnd.workxp.v3' https://demo.workxp.info/api/contacts.json
+curl -u user:pass -H 'Accept: application/vnd.workxp.v3' https://workxp.info/api/contacts.json
 ```
 
 ## 标识你的应用
@@ -64,11 +65,11 @@ WorkXP提供了两种认证方式，基于HTTP与OAuth2认证。
 如果你需要一个自己企业使用的应用，用HTTP认证方式就可以了，但如果你要做一个公开的应用，让别人来使用，那就要用OAuth2认证方式。  
 Basic HTTP Authentication  
 
-	curl -u user:pass https://demo.workxp.info/api/users.json
+	curl -u user:pass https://workxp.info/api/users.json
 	
 OAuth2 token认证方式  
 
-	curl -H "Authorization: Bearer OAUTH-TOKEN" https://demo.workxp.info/api/users.json
+	curl -H "Authorization: Bearer OAUTH-TOKEN" https://workxp.info/api/users.json
 
 ## 数据接口
 目前只实现了下面的接口，如果你需要更多的接口，可以和我们联系:yuanping@workxp.info

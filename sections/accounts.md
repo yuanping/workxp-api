@@ -14,17 +14,17 @@
 		"name": "容平志远科技（北京）有限公司", 
 		"domain": "rongping",
 		"plan": "免费版",
-		"expired_on": "YYYY-MM-DD",
+		"expire_on": "YYYY-MM-DD",
 		"free_storage": 2000
 	}
 ```
 ### Description
 `plan` 免费版、个人版、基础版、加强版、高级版、终极版、其它  
 `free_storage` 剩余空间数量，单位字节。(1024 = 1K)  
-`expired_at` 到期时间  
+`expire_on` 到期时间  
 
 ## Get Accounts
-登录成功后可以通过此接口得到用户所有的帐户信息。其中域名`domain`作为URL的二级域名请求得到此帐户的数据。
+登录成功后可以通过此接口得到用户所有的帐户信息。其中域名`domain`会以Request的HEAD请求得到此帐户的数据。
 ### Request
 `GET : /accounts.json`  
 
@@ -37,7 +37,7 @@
 			"name": "容平志远科技（北京）有限公司", 
 			"domain": "rongping",
 			"plan": "免费版",
-			"expired_on": "YYYY-MM-DD",
+			"expire_on": "YYYY-MM-DD",
 			"free_storage": 2000
 		}
 	]
