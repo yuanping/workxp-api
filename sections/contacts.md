@@ -3,7 +3,7 @@
 
 ## Get contacts
 如果使用此接口取联系人，请确保通过`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
-`GET /contacts.json`  一页500条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
+`GET /contacts.json`  一页300条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
 
 ### Response
 
@@ -46,6 +46,13 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 网站: office/公司  personal/个人  others/其它 
 地址: office/公司  home/住宅  others/其它  
 `access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
+
+## Get contacts count
+`/cotnacts/count.json` 参数与取联系人相同，可以得到联系人的总数。
+
+```json
+	{"num": 1024}
+```
 
 ## Post contact
 `POST /contacts.json` 上传或修改联系人头像需要头像文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
