@@ -22,7 +22,7 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/Task/Email/ChanceNote",
+			"type":"Note/Comment/Schedule/Email/ChanceNote/KaseNote",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
@@ -40,7 +40,8 @@
 
 ### Description
 如果`type`为`Comment`，表示这条记录是评论，`parent_id`表示这条评论属于哪个事件。  
-如果`type`为`ChanceNote`，表示这是机会状态改变的动态，`pending`,`won`,`lost`对应着机会状态变为跟踪、成功，失败。  
+如果`type`为`ChanceNote`，表示这是机会状态改变的动态，`pending`,`won`,`lost`对应着机会状态变为跟踪、成功，失败, `''`表示新创建的机会。  
+如果`type`为`KaseNote`，目前只有一种情况，表示新创建了项目。
 `access_policy`：哪些人可以看见这条记录，`Everyone`所有人可见，`23,34,12`表示ID为23,34,12的用户可以看见。
 
 ## Get contact activities
