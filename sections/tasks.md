@@ -11,9 +11,13 @@
 		{
 			"id":22,
 			"content":"task content",
-			"target_id": 26,
-			"target_type": "Contact/Deal/Case/Note",
-			"target_name": "袁平",
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"target":{
+				"id": 12,
+				"name": "袁平",
+				"type": "Contact/Chance/Kase/Note"
+			},
 			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"category": {"id": 2, "name": "约见"},
 			"author":{
@@ -31,6 +35,8 @@
 		}
 	]
 ```
+### Description
+`target`表示这个任务是哪个对象（联系人，机会，项目，事件）的，也可以为空。
 
 
 ## Post task
@@ -43,10 +49,9 @@
 	{
 		"content":"task content",
 		"target_id": 26,
-		"target_type": "Contact/Deal/Case/Note",
+		"target_type": "Contact/Chance/Kase/Note",
 		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
-		"owner_id":37,
 		"assigned_to_id":36,
 		"privacy":"public/private",
 		"state":"pending/done"
