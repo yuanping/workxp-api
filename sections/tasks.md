@@ -2,7 +2,7 @@
 
 ## Get tasks
 
-`GET /tasks.json` 得到所有自己的待办任务.一页100条记录，如果要取更多记录，需要加参数`&page=2`，`&page=3`以此类推。如果没有新的数据，返回`[]`。
+`GET /tasks.json` 得到所有自己的待办任务.一页50条记录，如果要取更多记录，需要加参数`&page=2`，`&page=3`以此类推。如果没有新的数据，返回`[]`。
 
 ### Response
 
@@ -19,7 +19,7 @@
 				"type": "Contact/Chance/Kase/Note"
 			},
 			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
-			"category": {"id": 2, "name": "约见"},
+			"category": {"id": 2, "name": "约见", "color": "#46647C"},
 			"author":{
 				"id": 37,
 				"name": "袁平",

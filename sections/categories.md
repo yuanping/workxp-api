@@ -9,8 +9,22 @@
 
 ```json
 	[
-		{"id":5, "name":"email",  "color":"#46647C", "type":"TaskCategory"},
-		{"id":6, "name":"Call",  "color":"#4664CC", "type":"ChanceCategory"}
+		{
+			"id":5, 
+			"name":"email",
+			"color":"#46647C", 
+			"type":"TaskCategory", 
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ"
+		},
+		{
+			"id":6, 
+			"name":"Call",  
+			"color":"#4664CC", 
+			"type":"ChanceCategory", 
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ"
+		}
 	]
 ```
 
