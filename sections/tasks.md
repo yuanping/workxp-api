@@ -41,7 +41,7 @@
 
 ## Post task
 
-`POST /tasks.json`
+`POST /tasks.json` `content`不能为空。
 
 ### Params
 
@@ -74,6 +74,8 @@
 ```json
 	{
 		"content":"task content",
+		"target_id": 26,
+		"target_type": "Contact/Chance/Kase/Note",
 		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
 		"assigned_to_id":36,
