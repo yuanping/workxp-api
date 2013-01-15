@@ -10,7 +10,6 @@
 
 ```json
 	{    
-		"author_id": 37,
 		"content":"Note content",
 		"type":"Note/Comment",
 		"contact_id":66,

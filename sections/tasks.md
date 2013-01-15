@@ -13,11 +13,10 @@
 			"content":"task content",
 			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
-			"target":{
-				"id": 12,
-				"name": "袁平",
-				"type": "Contact/Chance/Kase/Note"
-			},
+			"contact":{"id":66, "name":"汪练"},
+			"deal":{"id":66, "name":"购买WorkXP基本版"},
+			"case":{"id":66, "name":"销售案例"},
+			"note":{"id":33, "content":"事件"},
 			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"category": {"id": 2, "name": "约见", "color": "#46647C"},
 			"author":{
@@ -36,7 +35,7 @@
 	]
 ```
 ### Description
-`target`表示这个任务是哪个对象（联系人，机会，项目，事件）的，也可以为空。
+一个任务可以关联多个对象（联系人，机会，项目，事件），也可以不关联任务对象。如果在一个联系人的事件上关联一个任务，则`contact`和`note`都有对应的值。
 
 
 ## Post task
@@ -48,8 +47,10 @@
 ```json
 	{
 		"content":"task content",
-		"target_id": 26,
-		"target_type": "Contact/Chance/Kase/Note",
+		"contact_id":66,
+		"deal_id":77,
+		"case_id":77,
+		"note_id":33,
 		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
 		"assigned_to_id":36,
@@ -74,8 +75,10 @@
 ```json
 	{
 		"content":"task content",
-		"target_id": 26,
-		"target_type": "Contact/Chance/Kase/Note",
+		"contact_id":66,
+		"deal_id":77,
+		"case_id":77,
+		"note_id":33,
 		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"category_id":2,
 		"assigned_to_id":36,
