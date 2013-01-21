@@ -67,10 +67,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 		"company": "WorkXP",
 		"others": "background info",
 		"type":"Company/Person",
-		"avatar": {
-			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
-	    	"name": "final_mockup.png"
-		},
+		"avatar": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
 		"contact_methods":[
 			{
 				"type":"ContactPhone",
@@ -123,10 +120,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 		"title":"CEO",
 		"company":"WorkXP",
 		"others":"background info",
-		"avatar": {
-			"token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
-	    	"name": "final_mockup.png"
-		},
+		"avatar": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
 		"contact_methods":[ 
 			 {
 		 		"type":"ContactPhone",

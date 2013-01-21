@@ -17,12 +17,7 @@
 		"case_id":77,
 		"parent_id":9,
 		"external":false,
-		"attachments": [
-	    {
-	      "token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
-	      "name": "final_mockup.png"
-	    }
-	  ]
+		"attachments": ["4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c"]
 	}	
 ```
 
