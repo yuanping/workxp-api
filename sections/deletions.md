@@ -11,7 +11,7 @@
 	[
 		{
 		"id":"34,35,36",  
-		"type":"Note/Comment/User/Catetory/Contact/Schedule",
+		"type":"Note/User/Catetory/Contact/Schedule",
 		"created_at":"YYYY-MM-DDTHH:MM:SSZ"
 		}
 	]
