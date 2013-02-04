@@ -15,7 +15,8 @@
 		"domain": "rongping",
 		"plan": "免费版",
 		"expire_on": "YYYY-MM-DD",
-		"free_storage": 2000
+		"free_storage": 2000,
+		"dropbox_email": "box.workxp@workxp.info"
 	}
 ```
 ### Description

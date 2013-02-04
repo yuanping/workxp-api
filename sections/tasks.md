@@ -5,6 +5,8 @@
 `GET /tasks.json` 得到所有访问权限能看见的任务（公开的或分配给我和我分配给别人的）.  
 一页50条记录，如果要取更多记录，需要加参数`&page=2`，`&page=3`以此类推。如果没有新的数据，返回`[]`。
 
+### Params
+`collection`：如果为`incoming`表示待办任务，`completed`表示已完成的任务，`assigned`表示我分配给别人的。
 ### Response
 
 ```json
