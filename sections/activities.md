@@ -44,3 +44,35 @@
 如果`type`为`ChanceNote`，表示这是机会状态改变的动态，`pending`,`won`,`lost`对应着机会状态变为跟踪、成功，失败, `''`表示新创建的机会。  
 如果`type`为`KaseNote`，目前只有一种情况，表示新创建了项目。
 `access_policy`：哪些人可以看见这条记录，`Everyone`所有人可见，`23,34,12`表示ID为23,34,12的用户可以看见。
+
+## Get activity
+`GET /activities/3.json` 返回指定的动态
+
+###Response
+
+```json
+	{    
+		"id":3,
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"author":{
+			"id": 37,
+			"type": "User/Person",
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"content":"Note content",
+		"type":"Note/Comment/Schedule/Email/ChanceNote/KaseNote",
+		"contact":{"id":66, "name":"汪练"},
+		"deal":{"id":66, "name":"购买WorkXP基本版"},
+		"case":{"id":66, "name":"销售案例"},
+		"occurred_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"parent_id":45,
+		"external":false,
+		"state":"done/pending/won/lost",
+		"attachments":[
+			{"name":"avatar.png", "url":"http://workxp.info/avatar.png"}
+		],
+		"access_policy": "Everyone/user_ids"
+	}
+```
