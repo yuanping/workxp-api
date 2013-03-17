@@ -93,4 +93,8 @@
 ### Response
 如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`
 
+## Delete task
+`DELETE /tasks/37.json`
 
+### Response
+删除成功返回`204 No Content`，如果用户没有权限修改返回`403 Forbidden`。
