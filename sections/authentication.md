@@ -24,9 +24,9 @@ curl -u username:password \
 OAuth2是一种标准的认证方式，提供了一种简单的方式来让用户访问他的帐户。你会得到一个API的token而不用向用户要他们的密码。
 
 1. [OAuth2的客户端](http://oauth.net/code/).
-2. 在WorkXP上注册你的应用 [workxp.info/integrate](https://workxp.info/integrate)。注册完成后你会分配到`client_id`和`client_secret`。
+2. 在WorkXP上注册你的应用 [workxp.info/integrate](https://workxp.info/integrate)（目前还未开放自助注册，可以通过邮件联系我们）。注册完成后你会分配到`client_id`和`client_secret`。
 你需要要提供一个`redirect_uri`:我们会把验证的`code`发到这个URL。如果你还没准备好，可以先提供一个测试的，比如说 `http://myapp.com/oauth`。
-3. 配置你的OAuth2 library，设置`client_id`, `client_secret`, 和 `redirect_uri`。请求`https://workxp.info/oauth/authorize`认证并通过 `https://workxp.info/oauth/token`得到访问token。
+3. 配置你的OAuth2 library，设置`client_id`, `client_secret`, 和 `redirect_uri`。请求`https://workxp.info/oauth/authorize`认证并通过 `https://workxp.info/oauth/token`(POST请求)得到访问token。
 4. 试着发起一个请求`https://workxp.info/api/authorization.json`测试一下。
 
 
