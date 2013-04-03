@@ -77,6 +77,8 @@ OAuth2 token认证方式
 * [Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)
 * [Users](https://github.com/yuanping/workxp-api/blob/master/sections/users.md)
 * [Contacts](https://github.com/yuanping/workxp-api/blob/master/sections/contacts.md)
+* [Deals](https://github.com/yuanping/workxp-api/blob/master/sections/deals.md)
+* [Cases](https://github.com/yuanping/workxp-api/blob/master/sections/cases.md)
 * [Activities](https://github.com/yuanping/workxp-api/blob/master/sections/activities.md)
 * [Notes](https://github.com/yuanping/workxp-api/blob/master/sections/notes.md)
 * [Tasks](https://github.com/yuanping/workxp-api/blob/master/sections/tasks.md)

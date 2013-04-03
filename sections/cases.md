@@ -14,7 +14,7 @@
 			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"closed_at":"YYYY-MM-DDTHH:MM:SSZ",
-			"name":"暨南大学教育管理项目",  
+			"name":"WorkXP iOS开发",  
 			"description":"description",
 			"author":{
 				"id": 37,
@@ -48,7 +48,7 @@
 		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
 		"closed_at":"YYYY-MM-DDTHH:MM:SSZ",
-		"name":"暨南大学教育管理项目",  
+		"name":"WorkXP iOS开发",  
 		"description":"description",
 		"author":{
 			"id": 37,
