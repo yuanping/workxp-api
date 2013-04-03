@@ -1,0 +1,85 @@
+# Deal
+商业机会
+
+## Get deals
+如果使用此接口取机会，请确保通过`begin`参数来限制返回结果的数量，以机会的`updated_at`时间,获取更新、或新增的机会。如果没有新的数据，返回`[]`。  
+`GET /deals.json`  一页200条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
+
+### Response
+
+```json
+	[
+		{
+			"id":56,
+			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"name":"汪练",  
+			"state":"pending/won/lost",
+			"expected_contact_amount":300,
+			"price":30,
+			"price_type": "fixed/hour/month/year",
+			"duration": 5,
+			"contact":{"id":66, "name":"汪练"},
+			"description":"description",
+			"author":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
+			"assigned_user":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
+			"category": {"id": 2, "name": "外包", "color": "#46647C"},
+			"access_policy": "Everyone/user_ids"
+		}
+	]
+```
+
+### Description
+`access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
+`price_type` 计费的类型：固定价/每小时/每月/每年 
+`duration` 如果`price_type`为每月时，表示收费几个月
+`price` 每月多少钱
+`expected_contact_amount` 为总金额
+
+## Get contacts count
+`/deals/count.json` 参数与取机会相同，可以得到机会的总数。
+
+```json
+	{"num": 1024}
+```
+
+## Get deal
+`GET /deals/3.json` 返回指定的机会
+
+###Response
+
+```json
+	{
+		"id":56,
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"name":"汪练",  
+		"state":"pending/won/lost",
+		"expected_contact_amount":300,
+		"price":30,
+		"price_type": "hour/month/year",
+		"duration": 5,
+		"contact":{"id":66, "name":"汪练"},
+		"description":"description",
+		"author":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"assigned_user":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"category": {"id": 2, "name": "外包", "color": "#46647C"},
+		"access_policy": "Everyone/user_ids"
+	}
+```
