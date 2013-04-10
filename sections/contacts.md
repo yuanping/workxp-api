@@ -45,6 +45,7 @@
 IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它  
 网站: office/公司  personal/个人  others/其它 
 地址: office/公司  home/住宅  others/其它  
+
 `access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
 
 ## Get contacts count

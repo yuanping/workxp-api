@@ -56,10 +56,10 @@
 ### Description
 如果`type`为`Comment`，表示这条记录是评论，`parent_id`表示这条评论属于哪个事件。  
 如果`type`为`ChanceNote`，表示这是机会状态改变的动态，`pending`,`won`,`lost`对应着机会状态变为跟踪、成功，失败, `''`表示新创建的机会。  
-如果`type`为`KaseNote`，目前只有一种情况，表示新创建了项目。
-`access_policy`：哪些人可以看见这条记录，`Everyone`所有人可见，`23,34,12`表示ID为23,34,12的用户可以看见。
-`subject`,`email_to`和`email_from`只有在`type`为`Email`时有值，表示邮件的发件人与收件人。
-`category`只有在`type`为`Schedule`时有值，表示任务的分类。
+如果`type`为`KaseNote`，目前只有一种情况，表示新创建了项目。  
+`access_policy`：哪些人可以看见这条记录，`Everyone`所有人可见，`23,34,12`表示ID为23,34,12的用户可以看见。  
+`subject`,`email_to`和`email_from`只有在`type`为`Email`时有值，表示邮件的发件人与收件人。  
+`category`只有在`type`为`Schedule`时有值，表示任务的分类。  
 
 ## Get activity
 `GET /activities/3.json` 返回指定的动态
@@ -106,3 +106,9 @@
 		"access_policy": "Everyone/user_ids"
 	}
 ```
+
+## Search activities
+`GET /activities/search.json` 搜索所有事件与评论的内容包括关键字的数据，参数名为`term`，一次最多返回50条记录，返回的数据结构与取动态一致。
+
+###Params
+`term` 要搜索的内容

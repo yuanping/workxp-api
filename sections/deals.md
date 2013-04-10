@@ -38,11 +38,11 @@
 ```
 
 ### Description
-`access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
-`price_type` 计费的类型：固定价/每小时/每月/每年 
-`duration` 如果`price_type`为每月时，表示收费几个月
-`price` 每月多少钱
-`expected_contact_amount` 为总金额
+`access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见  
+`price_type` 计费的类型：固定价/每小时/每月/每年   
+`duration` 如果`price_type`为每月时，表示收费几个月  
+`price` 每月多少钱  
+`expected_contact_amount` 为总金额  
 
 ## Get contacts count
 `/deals/count.json` 参数与取机会相同，可以得到机会的总数。
