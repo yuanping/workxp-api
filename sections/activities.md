@@ -42,6 +42,16 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"category": {"id": 2, "name": "约见", "color": "#46647C"},
+			"assigned_to":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
+			"completed_user":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
 			"parent_id":45,
 			"external":false,
 			"state":"done/pending/won/lost",
@@ -97,6 +107,16 @@
 			"avatar_url":"http://workxp.info/avatar.png"
 		},
 		"category": {"id": 2, "name": "约见", "color": "#46647C"},
+		"assigned_to":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"completed_user":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
 		"parent_id":45,
 		"external":false,
 		"state":"done/pending/won/lost",

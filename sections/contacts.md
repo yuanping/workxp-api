@@ -55,6 +55,38 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 	{"num": 1024}
 ```
 
+## Get contact
+`GET /activities/56.json` 返回指定的联系人
+
+###Response
+```json
+	{
+		"id":56,
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"name":"汪练",  
+		"title":"CEO",
+		"type":"Company/Person",
+		"company":{"id": 34, "name": "WorkXP"},
+		"others":"background info",
+		"author":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"avatar":{"name":"avatar.png", "url":"http://workxp.info/avatar.png"},
+		"contact_methods":[
+			{
+				"id":234,
+				"type":"ContactPhone",
+				"key":"office", 
+				"value":"123123123321" 
+			}
+		],
+		"access_policy": "Everyone/user_ids"
+	}
+```
+
 ## Post contact
 `POST /contacts.json` 上传或修改联系人头像需要头像文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
 也就是说你要先上传图片，再把它关联到联系人上。没有头像，`avatar`设置为`{}`。

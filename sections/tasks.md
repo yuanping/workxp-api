@@ -16,11 +16,11 @@
 			"content":"task content",
 			"created_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
 			"note":{"id":33, "content":"事件"},
-			"due_at":"YYYY-MM-DDTHH:MM:SSZ",
 			"category": {"id": 2, "name": "约见", "color": "#46647C"},
 			"author":{
 				"id": 37,
@@ -32,6 +32,11 @@
 				"name": "汪练",
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
+			"completed_user":{
+				"id": 37,
+				"name": "袁平",
+				"avatar_url":"http://workxp.info/avatar.png"
+			},
 			"privacy":"public/private",
 			"state":"pending/done"
 		}
@@ -40,6 +45,41 @@
 ### Description
 一个任务可以关联多个对象（联系人，机会，项目，事件），也可以不关联任务对象。如果在一个联系人的事件上关联一个任务，则`contact`和`note`都有对应的值。
 
+## Get task
+`GET /tasks/22.json` 返回指定的任务
+
+###Response
+```json
+	{
+		"id":22,
+		"content":"task content",
+		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"due_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"contact":{"id":66, "name":"汪练"},
+		"deal":{"id":66, "name":"购买WorkXP基本版"},
+		"case":{"id":66, "name":"销售案例"},
+		"note":{"id":33, "content":"事件"},
+		"category": {"id": 2, "name": "约见", "color": "#46647C"},
+		"author":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"assigned_to":{
+			"id": 21,
+			"name": "汪练",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"completed_user":{
+			"id": 37,
+			"name": "袁平",
+			"avatar_url":"http://workxp.info/avatar.png"
+		},
+		"privacy":"public/private",
+		"state":"pending/done"
+	}
+```
 
 ## Post task
 
