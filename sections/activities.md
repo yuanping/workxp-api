@@ -69,7 +69,7 @@
 如果`type`为`KaseNote`，目前只有一种情况，表示新创建了项目。  
 `access_policy`：哪些人可以看见这条记录，`Everyone`所有人可见，`23,34,12`表示ID为23,34,12的用户可以看见。  
 `subject`,`email_to`和`email_from`只有在`type`为`Email`时有值，表示邮件的发件人与收件人。  
-`category`只有在`type`为`Schedule`时有值，表示任务的分类。  
+`assigned_to`, `completed_use` and `category`只有在`type`为`Schedule`时有值，表示任务分配给谁，完成人与分类。  
 
 ## Get activity
 `GET /activities/3.json` 返回指定的动态
