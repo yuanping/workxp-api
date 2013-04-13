@@ -32,6 +32,7 @@
 					"value":"123123123321" 
 				}
 			],
+			"tags":[{"id": 2, "name": "VIP"}],
 			"access_policy": "Everyone/user_ids"
 		}
 	]
@@ -83,6 +84,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 				"value":"123123123321" 
 			}
 		],
+		"tags":[{"id": 2, "name": "VIP"}],
 		"access_policy": "Everyone/user_ids"
 	}
 ```
