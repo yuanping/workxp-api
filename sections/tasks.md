@@ -5,8 +5,12 @@
 `GET /tasks.json` 得到所有访问权限能看见的任务（公开的或分配给我和我分配给别人的）.  
 一页50条记录，如果要取更多记录，需要加参数`&page=2`，`&page=3`以此类推。如果没有新的数据，返回`[]`。
 
+客户端如果想同步当前用户的待办任务，第一次请求时，不需要传`collection`与`user_id`参数，得到当前用户的所有待办任务。
+之后需要传`collection`=`todo`与`begin`参数，取服务器某个时间之后更新过的任务。
+
 ### Params
-`collection`：如果为`incoming`表示待办任务，`completed`表示已完成的任务，`assigned`表示我分配给别人的。
+`collection`：如果为`incoming`表示待办任务（默认值），`completed`表示已完成的任务，`assigned`表示我分配给别人还未完成的任务，`todo`表示我分配给别人或自己的任务。
+`user_id` ：指定查看某个用户的任务，没有此参数时为当前用户
 ### Response
 
 ```json
