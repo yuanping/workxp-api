@@ -24,7 +24,7 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"content":"Note content",
-			"type":"Note/Comment/Schedule/Email/ChanceNote/KaseNote",
+			"type":"Note/Comment/Schedule/Email/ChanceNote/KaseNote/CheckIn",
 			"contact":{"id":66, "name":"汪练"},
 			"deal":{"id":66, "name":"购买WorkXP基本版"},
 			"case":{"id":66, "name":"销售案例"},
@@ -42,6 +42,8 @@
 				"avatar_url":"http://workxp.info/avatar.png"
 			},
 			"category": {"id": 2, "name": "约见", "color": "#46647C"},
+			"longitude": 12.322,
+			"latitude": 34.232,
 			"assigned_to":{
 				"id": 37,
 				"name": "袁平",
@@ -107,6 +109,8 @@
 			"avatar_url":"http://workxp.info/avatar.png"
 		},
 		"category": {"id": 2, "name": "约见", "color": "#46647C"},
+		"longitude": 12.322,
+		"latitude": 34.232,
 		"assigned_to":{
 			"id": 37,
 			"name": "袁平",

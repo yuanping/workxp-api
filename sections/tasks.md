@@ -9,7 +9,7 @@
 之后需要传`collection`=`todo`与`begin`参数，取服务器某个时间之后更新过的任务。
 
 ### Params
-`collection`：如果为`incoming`表示待办任务（默认值），`completed`表示已完成的任务，`assigned`表示我分配给别人还未完成的任务，`todo`表示我分配给别人或自己的任务。
+`collection`：如果为`incoming`表示待办任务（默认值），`completed`表示已完成的任务，`assigned`表示我分配给别人还未完成的任务，`todo`表示我分配给别人或自己的任务。  
 `user_id` ：指定查看某个用户的任务，没有此参数时为当前用户
 ### Response
 
