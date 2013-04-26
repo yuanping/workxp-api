@@ -44,3 +44,38 @@
 	]
 ```
 
+## Register
+注册WorkXP账号
+
+### Request
+'POST : /accounts.json'
+
+### Params
+```json
+	{
+		"email": "yuanping@workxp.info",  
+		"password": "Password",
+		"name": "user's name",
+		"company":"Company or Team Name",
+		"plan": "free/solo/basic/plus/advance/max"
+	}
+```
+
+### Response
+创建成功返回`201 Created`，如果用户已注册返回`409 Conflict`，用户注册但没激活返回`403 Forbidden`。 
+
+## Reset Password
+通过Email重置密码
+
+### Request
+'POST : /accounts/password.json'
+
+### Params
+```json
+	{
+		"email": "yuanping@workxp.info"
+	}
+```
+
+### Response
+创建成功返回`200 OK`，如果这个Email没有注册返回`403 Forbidden`。 
