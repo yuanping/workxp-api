@@ -64,6 +64,22 @@
 ### Response
 创建成功返回`201 Created`，如果用户已注册返回`409 Conflict`，用户注册但没激活返回`403 Forbidden`。 
 
+## Update Company name
+修改当前账号信息，公司名称和自己的姓名，只用传需要修改的参数，此接口在请求的Head里要有二级域名。
+### Request
+`PUT : /accounts/3.json`  
+
+### Params
+```json
+	{
+		"company_name": "团队名称",
+		"user_name": "用户的姓名"
+	}
+```
+
+### Response
+创建成功返回`200 OK`
+
 ## Reset Password
 通过Email重置密码
 
