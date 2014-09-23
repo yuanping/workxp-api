@@ -2,7 +2,7 @@
 联系人包括公司与个人。一个联系人可以有多个联系方式(`contact_methods`)。
 
 ## Get contacts
-如果使用此接口取联系人，请确保通过`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间,获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
+如果使用此接口取联系人，请确保通过`begin`参数来限制返回结果的数量，以联系人的`updated_at`时间，获取更新、或新增的联系人。如果没有新的数据，返回`[]`。  
 `GET /contacts.json`  一页200条记录，如果要取更多记录，需要加`&page=2`参数，`&page=3`以此类推。
 
 ### Response
@@ -32,7 +32,7 @@
 					"value":"123123123321" 
 				}
 			],
-			"tags":[{"id": 2, "name": "VIP"}],
+			"tags":["VIP", "上海"],
 			"access_policy": "Everyone/user_ids"
 		}
 	]
@@ -84,7 +84,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 				"value":"123123123321" 
 			}
 		],
-		"tags":[{"id": 2, "name": "VIP"}],
+		"tags":["VIP", "上海"],
 		"access_policy": "Everyone/user_ids"
 	}
 ```
@@ -102,7 +102,8 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 		"company": "WorkXP",
 		"others": "background info",
 		"type":"Company/Person",
-		"avatar": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+		"avatar_token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+		"tags":["VIP", "上海"],
 		"contact_methods":[
 			{
 				"type":"ContactPhone",
@@ -140,6 +141,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 				"value":"123123123321" 
 			}
 		],
+		"tags":["VIP", "上海"],
 		"access_policy": "Everyone/user_ids"
 	}
 ```
@@ -155,7 +157,8 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 		"title":"CEO",
 		"company":"WorkXP",
 		"others":"background info",
-		"avatar": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+		"avatar_token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+		"tags":["VIP", "上海"],
 		"contact_methods":[ 
 			 {
 		 		"type":"ContactPhone",

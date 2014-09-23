@@ -65,7 +65,7 @@
 		"state":"pending/won/lost",
 		"expected_contact_amount":300,
 		"price":30,
-		"price_type": "hour/month/year",
+		"price_type": "fixed/hour/month/year",
 		"duration": 5,
 		"contact":{"id":66, "name":"汪练"},
 		"description":"description",
@@ -83,3 +83,45 @@
 		"access_policy": "Everyone/user_ids"
 	}
 ```
+
+## Post deal
+`POST /deals.json` 上传或修改机会图标需要文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
+也就是说你要先上传图片，再把它关联到机会。不设置图标，`avatar_token`设置为`{}`。
+
+### Params
+
+```json
+	{
+		"name":"WorkXP基础版",  
+		"state":"pending/won/lost",
+		"expected_contact_amount":300,
+		"price":30,
+		"price_type": "fixed/hour/month/year",
+		"duration": 5,
+		"contact_id": 66,
+		"description":"description",
+		"avatar_token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c",
+		"assigned_user_id":36,
+    "category_id":2
+	}
+```
+
+### Response
+创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
+返回结果与Get deal一致。
+
+## Modify deal
+`PUT /deals/37.json`
+
+### Params
+
+与Post deal参数一致。
+
+### Response
+如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`
+
+## Delete deal
+`DELETE /deals/37.json`
+
+### Response
+删除成功返回`204 No Content`，如果用户没有权限修改返回`403 Forbidden`。

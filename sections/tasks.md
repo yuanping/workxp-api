@@ -108,10 +108,7 @@
 
 ### Response
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
-
-```json
-	{"id": 83}
-```
+返回json与 Get task 一致。
 
 # Modify task
 

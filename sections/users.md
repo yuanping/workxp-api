@@ -5,6 +5,9 @@
 `GET : /users/3.json`  返回指定的用户  
 `GET : /users/me.json`  返回当前的用户
 
+### Params
+`group_id` 返回某个组的用户
+
 ### Response
 
 ```json
@@ -13,6 +16,7 @@
 		"name": "YuanPing", 
 		"email": "yuanping@workxp.info",
 		"admin": true,
+		"groups": [1, 3],
 		"created_at": "YYYY-MM-DDTHH:MM:SSZ",
 		"last_sign_in_at": "YYYY-MM-DDTHH:MM:SSZ",
 		"avatar_url": "http://workxp.info/avatar.png"
@@ -32,6 +36,7 @@
 			"name": "YuanPing", 
 			"email": "yuanping@workxp.info",
 			"admin": true,
+      "groups": [1, 3],
 			"created_at": "YYYY-MM-DDTHH:MM:SSZ",
 			"last_sign_in_at": "YYYY-MM-DDTHH:MM:SSZ",
 			"avatar_url": "http://workxp.info/avatar.png"

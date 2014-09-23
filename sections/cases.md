@@ -60,3 +60,38 @@
 	}
 	
 ```
+
+## Post case
+`POST /cases.json` 上传或修改项目图标需要文件的验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
+也就是说你要先上传图片，再把它关联到项目。不设置图标，`avatar_token`设置为`{}`。
+
+### Params
+
+```json
+	{
+		"name":"WorkXP基础版",  
+		"description":"description",
+		"closed_at":"YYYY-MM-DDTHH:MM:SSZ",
+		"avatar_token": "4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c"
+	}
+```
+
+### Response
+创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
+返回结果与Get case一致。
+
+## Modify case
+`PUT /cases/37.json`
+
+### Params
+
+与Post case参数一致。
+
+### Response
+如果更新成功返回`200 OK`，如果用户没有权限修改返回`403 Forbidden`
+
+## Delete case
+`DELETE /cases/37.json`
+
+### Response
+删除成功返回`204 No Content`，如果用户没有权限修改返回`403 Forbidden`。

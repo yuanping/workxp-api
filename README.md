@@ -7,7 +7,7 @@
 二级域名可以通过[Accounts](https://github.com/yuanping/workxp-api/blob/master/sections/accounts.md)接口得到。  
 Accounts接口不需要二级域名。
 
-通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系的Path，比如 https://workxp.info/api/contacts.json. 可以用curl来测试:
+通过请求得到你帐户上所有的联系人，在上面的地址后面加上联系人的Path，比如 https://workxp.info/api/contacts.json. 可以用curl来测试:
 
 ```shell
 curl -u user:pass -H 'User-Agent: MyApp (yourname@example.com)' -H 'Sub-Domain: rongping' https://workxp.info/api/contacts.json
