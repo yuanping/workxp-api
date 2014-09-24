@@ -5,13 +5,14 @@
 `POST /notes.json` 添加一个事件,评论或签到.  
 把文件关联到事件或评论上需要验证码(token)和文件名。验证码如何得到可以参考[Create attachments](https://github.com/yuanping/workxp-api/blob/master/sections/attachments.md)，
 也就是说你要先上传文件，再把它关联到事件或评论上。
-
+`type`为`CustomNote`时，Note的content字段在WorkXP上显示时，支持Markdown的语法。即`content`字段可以传入Markdown格式的字符串，
+可以实现从WorkXP到其它系统的链接。
 ### Params
 
 ```json
 	{    
 		"content":"Note content",
-		"type":"Note/Comment/CheckIn",
+		"type":"CustomNote/Note/Comment/CheckIn",
 		"contact_id":66,
 		"deal_id":77,
 		"case_id":77,

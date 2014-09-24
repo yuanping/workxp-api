@@ -78,7 +78,7 @@
 
 ### Response
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
-返回结果与Get case一致。
+返回的数据结构与`Get case`接口返回的内容一致。
 
 ## Modify case
 `PUT /cases/37.json`

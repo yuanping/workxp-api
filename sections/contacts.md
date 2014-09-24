@@ -116,35 +116,7 @@ IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它
 
 ### Response
 创建成功返回`201 Created`，如果用户没有权限返回`403 Forbidden`。  
-
-```json
-	{
-		"id":56,
-		"created_at":"YYYY-MM-DDTHH:MM:SSZ",
-		"updated_at":"YYYY-MM-DDTHH:MM:SSZ",
-		"name":"汪练",  
-		"title":"CEO",
-		"type":"Company/Person",
-		"company":{"id": 34, "name": "WorkXP"},
-		"others":"background info",
-		"author":{
-			"id": 37,
-			"name": "袁平",
-			"avatar_url":"http://workxp.info/avatar.png"
-		},
-		"avatar":{"name":"avatar.png", "url":"http://workxp.info/avatar.png"},
-		"contact_methods":[
-			{
-				"id":234,
-				"type":"ContactPhone",
-				"key":"office", 
-				"value":"123123123321" 
-			}
-		],
-		"tags":["VIP", "上海"],
-		"access_policy": "Everyone/user_ids"
-	}
-```
+返回的数据结构与`Get contact`接口返回的内容一致。
 
 ## Modify contact
 `PUT /contacts/37.json`
