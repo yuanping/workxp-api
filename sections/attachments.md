@@ -20,7 +20,23 @@
 }
 ```
 
+### Ruby Example
 
+```ruby
+conn = Faraday.new(:url => 'https://workxp.info') do |builder|
+  # POST/PUT params encoders:
+  builder.request  :multipart
+  builder.request  :url_encoded
+  builder.request  :json
 
+  builder.adapter  :net_http
+end
+
+# uploading a file:
+payload = { :profile_pic => Faraday::UploadIO.new('avatar.jpg', 'image/jpeg') }
+
+# "Multipart" middleware detects files and encodes with "multipart/form-data":
+conn.post '/attachments.json', payload, :'Sub-Domain' => 'your_domain'
+```
 
 
