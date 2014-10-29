@@ -20,6 +20,7 @@
 		"longitude": 32.233,
 		"latitude": 123.222,
 		"external":false,
+    "occurred_at": "YYYY-MM-DDTHH:MM:SSZ",
 		"attachments": ["4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c"]
 	}	
 ```
@@ -37,6 +38,7 @@
 		"longitude": 32.233,
 		"latitude": 123.222,
 		"external":false,
+    "occurred_at": "YYYY-MM-DDTHH:MM:SSZ",
 		"attachments": ["4f71ea23-134660425d1818169ecfdbaa43cfc07f4e33ef4c"],
 		"link_name": "任务关联时显示的名称",
 		"link_url": "任务关联时的链接",
