@@ -39,13 +39,14 @@
 ```
 
 ### Description
-`contact_methods`的`type`取值：`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress`  
+`contact_methods`的`type`取值：`ContactPhone/ContactEmail/ContactWebsite/ContactIm/ContactAddress/ContactSn`  
 `contact_methods`的`key`取值：   
 电话：office/公司  work/工作 mobile/手机  fax/传真  home/住宅  others/其它  
 邮箱：work/工作  personal/个人  others/其它  
 IM: gtalk/GTalk  msn/MSN  qq/QQ  others/其它  
 网站: office/公司  personal/个人  others/其它 
 地址: office/公司  home/住宅  others/其它  
+社交网络: weixin/微信 weibo/微博
 
 `access_policy` 返回Everyone或以逗号分隔的用户ID字符串 `Everyone`是所有人可见，`1,3,5`表示ID为1，3和5的用户可以看见
 
